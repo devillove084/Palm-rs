@@ -1,2 +1,8 @@
 * Palm-rs
 A rust implementation for [[http://www.vldb.org/pvldb/vol4/p795-sewall.pdf][Palm: Parallel architecture-friendly latch-free modifications to b+ trees on many-core processors]], a lock-free parallel in-memory B+-tree.
+
+** Benchmark
+- queries drawn from uniform dist (~INT_MIN~INT_MAX~): ~10M queries/sec
+- sorted queries: ~30M queries/sec
+  
+There is quite a performance gap, as sorting is yet to be parallelized.
