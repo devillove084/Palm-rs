@@ -5,5 +5,10 @@ A rust implementation for [[http://www.vldb.org/pvldb/vol4/p795-sewall.pdf][Palm
 - queries drawn from uniform dist (~INT_MIN~INT_MAX~): ~10M queries/sec
 - sorted queries: ~30M queries/sec
   
+There is quite a performance gap, as sorting is yet to be parallelized. 
+
+** Optimizations
+see comments in each file for details
+
+
 [fn:1] all experiments are carried out in AWS m5.8xlarge instance (16 physical cores, 128 GB RAM)
-There is quite a performance gap, as sorting is yet to be parallelized.
